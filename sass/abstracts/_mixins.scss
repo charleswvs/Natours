@@ -1,0 +1,7 @@
+@mixin clearfix {
+    &::after{
+        content: "";//specify a content, otherwise it wont work bitch!
+        display: table;
+        clear: both;
+    }
+}
