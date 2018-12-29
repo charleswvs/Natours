@@ -1,0 +1,30 @@
+.story{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem $shadow-medium-2;
+    background-color: rgba($color-white,.5);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem; //6 normal + 3 form transform
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);// to work on saffari
+        shape-outside: circle(50% at 50% 50%);//to work it needs to be floating, and has to have a height and width
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg);
+    }
+
+    &__img{
+        height: 100%;//taking __shape for reference
+    }
+    &__text{
+        transform: skewX(12deg);
+    }
+}

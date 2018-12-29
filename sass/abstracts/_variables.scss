@@ -1,13 +1,21 @@
-// project colors
+//PROJECT COLORS
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-secondary-light:#ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2990ff;
+$color-tertiary-dark: #5643fa;
+
 $color-grey-light-1: #f7f7f7f7;
 
 $color-grey-dark: #777;
+$color-grey-darker: #eee;
 $color-white: #fff;
 $color-black: #000;
+
 
 //FONT
 $default-font-size: 1.6rem;
@@ -16,3 +24,17 @@ $default-font-size: 1.6rem;
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
+//SHADOWS
+//rgba($color-black, 0.2) heading-typography; 
+//rgba($color-black, .15) Buttons, Cards, Feature Box; 
+//rgba($color-black, .5) Compositions; 
+//rgba($color-black, .3) featurebox; 
+//rgba($color-black, .8)feature box, header, home;
+
+$shadow-light-1: rgba($color-black, 0.15);
+$shadow-light-2: rgba($color-black, 0.2);
+$shadow-light-3: rgba($color-black, 0.3);
+$shadow-medium-1: rgba($color-black, 0.5);
+$shadow-medium-2: rgba($color-black, 0.6);
+$shadow-dark-1: rgba($color-black, 0.8);

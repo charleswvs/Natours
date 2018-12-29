@@ -9,6 +9,7 @@
     background-position: top;
     position: relative;
 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); //vendor info (onde day I'll know what that means
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &__logo-box {
@@ -27,6 +28,5 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-
     }
 }
