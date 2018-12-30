@@ -1,0 +1,94 @@
+.popup{
+    height: 100vh;
+    width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $shadow-dark-1;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    &:target &__content{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    &__close{
+        &:link, 
+        &:visited {
+            color: #777;
+            position: absolute;
+            top: 1rem;
+            right: 5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+        &:hover{
+            color: $color-primary;
+            
+        }
+    }
+    &__content{
+        width: 75%;
+        position: absolute;
+        z-index: 1001;
+        @include translate-50-50;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem $shadow-light-2;
+        border-radius: 3px;
+        display: table;
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(0.25);
+        transition: all .4s .2s;
+    }
+
+    &__left{
+        width: 33.3333333%;
+        height: 100%;
+        display: table-cell;
+    }
+    &__img{
+        width: 100%;
+        display: block;
+    }
+    &__right{
+        width: 66.6666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 5rem;
+        position: relative;
+    }
+    &__text{   
+        text-align: justify; 
+        font-size: 1.4rem;
+
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+
+        -moz-column-gap: 4rem;
+        -webkit-column-gap: 4rem;
+        column-gap: 4rem;
+
+        -webkit-column-rule: 1px solid $color-grey-darker;
+        column-rule: 1px solid $color-grey-darker;
+        margin-bottom: 4rem;
+
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    
+    
+}

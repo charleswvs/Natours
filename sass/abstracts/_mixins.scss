@@ -1,7 +1,14 @@
 @mixin clearfix {
-    &::after{
-        content: "";//specify a content, otherwise it wont work bitch!
+    &::after {
+        content: ""; //specify a content, otherwise it wont work bitch!
         display: table;
         clear: both;
     }
+}
+
+@mixin translate-50-50 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
