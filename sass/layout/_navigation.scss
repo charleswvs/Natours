@@ -14,6 +14,15 @@
         box-shadow: 0 1rem 3rem $shadow-light-1;
         text-align: center;
         cursor: pointer;
+
+        @include respond(tab-port){
+            top: 4rem;
+            right: 4rem;
+        }
+        @include respond(phone){
+            top: 3rem;
+            right: 3rem;
+        }
     }
     &__background{
         height: 6rem;
@@ -26,7 +35,14 @@
         z-index: 100;
         transition: transform .8s cubic-bezier(.25,.1,.25,1);
 
-        //transform: scale(50);
+        @include respond(tab-port){
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+        @include respond(phone){
+            top: 3.5rem;
+            right: 3.5em;
+        }
     }
     &__nav{
         height: 100vh;
@@ -37,6 +53,7 @@
 
         opacity: 0;
         width: 0;
+        visibility: hidden;
 
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
@@ -83,6 +100,7 @@
     }
 
     &__checkbox:checked ~ &__nav{
+        visibility: visible;
         opacity: 1;
         width: 100%;
     }

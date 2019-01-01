@@ -72,9 +72,29 @@
 
                 <div class="col-1-of-2">
                     <div class="composition">
+                        <img 
+                            srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            alt="Photo 1"
+                            class="composition__photo composition__photo--p1"
+                            src="img/nat-1-large.jpg">
+                        <img 
+                            srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 2000w"
+                            sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            alt="Photo 2"
+                            class="composition__photo composition__photo--p2"
+                            src="img/nat-2-large.jpg">
+                        <img 
+                            srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 3000w"
+                            sizes="(max-width: 900px) 30vw, (max-width: 600px) 30vw, 300px"
+                            alt="Photo 3"
+                            class="composition__photo composition__photo--p3"
+                            src="img/nat-3-large.jpg">
+                        <!--
                         <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
                         <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        -->
                     </div>
                 </div>
             </div>
@@ -327,7 +347,10 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.3em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
+            </picture>          
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -364,7 +387,7 @@
                 <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; please read these terms before booking</h3>
                 <p class="popup__text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis veritatis rem et cupiditate delectus libero itaque ducimus quibusdam! Tempora vel pariatur placeat error et, non cupiditate nisi assumenda nam aperiam.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae facilis debitis id qui ipsa recusandae porro, possimus a nam iusto, impedit, veniam maiores vitae veritatis consectetur natus praesentium eveniet molestiae?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Quae facilis debitis id qui ipsa recusandae porro, possimus a nam iusto, impedit, veniam maiores vitae veritatis consectetur natus praesentium eveniet molestiae?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ea error quas itaque nihil possimus aperiam nisi? Molestias laboriosam facilis aspernatur deserunt, ea facere quam, necessitatibus quos asperiores.
                 </p>
                 <a href="#" class="btn btn--green">Book Now!</a>

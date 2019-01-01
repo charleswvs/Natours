@@ -4,9 +4,15 @@
     font-size: 1.4rem;
     color: $color-grey-light-1;
 
+    @include respond(tab-port){
+        padding: 8rem 0;
+    }
     &__logo-box{
         text-align: center;//this one is for making the logo centered, because it behaves just like text, it is like this because it is a inline block
         margin-bottom: 8rem;
+        @include respond(tab-port){
+            margin-bottom: 4rem;
+        }
     }
     &__logo{
         width: 15rem;
@@ -17,6 +23,10 @@
         padding-top: 2rem;
         display: inline-block;
 
+        @include respond(tab-port){
+            width: 100%;
+            text-align: center;
+        }
     }
     &__list{
         list-style: none;
@@ -55,5 +65,11 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include respond(tab-port){
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
 }

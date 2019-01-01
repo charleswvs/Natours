@@ -18,19 +18,23 @@
         overflow: hidden; //fix for not round corner when u put an image
         box-shadow: 0 1.5rem 4rem $shadow-light-1;
 
-        &--front{
+        &--front {
             background-color: $color-white;
         }
-        &--back{
-            
+
+        &--back {
+
             transform: rotateY(180deg);
-            &-1{
+
+            &-1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
             }
-            &-2{
+
+            &-2 {
                 background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
             }
-            &-3{
+
+            &-3 {
                 background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
@@ -43,29 +47,31 @@
     &:hover &__side--back {
         transform: rotateY(0deg);
     }
-    
+
     //FRONT SIDE STYLING
-    &__picture{
+    &__picture {
         background-size: cover;
         height: 23rem;
-        background-blend-mode: screen;//this only works on new browsers, it changes de filter on a photo, just like instagram
+        background-blend-mode: screen; //this only works on new browsers, it changes de filter on a photo, just like instagram
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); //vendor for older browsers
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
 
-        &--1{
+        &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg); //it goes up a level because you have to think about the css file, which is in a another level
         }
-        &--2{
+
+        &--2 {
             background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg); //it goes up a level because you have to think about the css file, which is in a anothe level
         }
-        &--3{
+
+        &--3 {
             background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg); //it goes up a level because you have to think about the css file, which is in a anothe level
         }
     }
 
-    &__heading{
+    &__heading {
         font-size: 2.8rem;
         font-weight: 300;
         text-transform: uppercase;
@@ -77,30 +83,33 @@
         width: 75%;
     }
 
-    &__heading-span{
+    &__heading-span {
         padding: 1rem 1.5rem;
-        -webkit-box-decoration-break: clone;//to work on chrome
-        box-decoration-break: clone;//you need this to make the line look prettier, by make each like look as distinct elements
+        -webkit-box-decoration-break: clone; //to work on chrome
+        box-decoration-break: clone; //you need this to make the line look prettier, by make each like look as distinct elements
 
-        &--1{
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-secondary-light, .85), 
-            rgba($color-secondary-dark, .85));
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-secondary-light, .85),
+                rgba($color-secondary-dark, .85));
         }
-        &--2{
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-primary-light, .85), 
-            rgba($color-primary-dark, .85));
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, .85),
+                rgba($color-primary-dark, .85));
         }
-        &--3{
-            background-image: linear-gradient(to right bottom, 
-            rgba($color-tertiary-light, .85), 
-            rgba($color-tertiary-dark, .85));
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-tertiary-light, .85),
+                rgba($color-tertiary-dark, .85));
         }
     }
 
     &__details {
         padding: 3rem;
+
         ul {
             list-style: none;
             width: 80%;
@@ -111,17 +120,17 @@
                 text-align: center;
                 font-size: 1.5rem;
                 padding: 1rem;
-                
+
                 &:not(:last-child) {
                     border-bottom: 1px solid $color-grey-darker;
                 }
             }
         }
     }
+
     //BACK CARD STYLING
     &__cta {
-        @include translate-50-50
-        width: 90%;
+        @include translate-50-50 width: 90%;
         text-align: center;
     }
 
@@ -139,5 +148,54 @@
     &__price-value {
         font-size: 6rem;
         font-weight: 100;
+    }
+
+
+    //responsive design
+    @include respond(tab-port) {
+        //FUNCTIONALITY
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem $shadow-light-1;
+
+        &__side {
+
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            }
+        }
+
+        &__details{
+            padding: 1rem 3rem;
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+
+        //BACK CARD STYLING
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 4rem;
+        }
     }
 }
